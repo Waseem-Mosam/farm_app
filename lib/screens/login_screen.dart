@@ -70,7 +70,10 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.fromLTRB(20, 15,20, 15),
         minWidth: MediaQuery.of(context).size.width,
         onPressed: (){},
-        child: Text("Login"),
+        child: Text("Login", textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 20,
+        color: Colors.white,
+        fontWeight: FontWeight.bold),),
       ),
     );
     return Scaffold(
@@ -79,16 +82,43 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child: Container(
             color: Colors.white,
-            child: Form(
-              key: _formKey,
-              child: Column(
-                children: <Widget>[
-                  emailField,
-                  passwordField,
-                  loginButton,
-                ],
-              ),
+            child: Padding(
+              padding: const EdgeInsets.all(36.0),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    //SizedBox(
+                      //height: 200,
+                      //This would ne used if logo is needed above login fields
+                    //),
+
+                    emailField,
+                    SizedBox(height: 25 ,),
+                    passwordField,
+                    SizedBox(height: 25 ,),
+                    loginButton,
+                    SizedBox(height: 25 ,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+
+                      children: <Widget>[
+                        Text("Don't have an account? "),
+                        GestureDetector(
+                          onTap: (){},
+                          child: Text("SignUp", style: TextStyle(
+                              color: Colors.blueAccent,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),),
+                        )
+                      ],
+                    )
+                  ],
+                ),
           ),
+            ),
           ),
         ),
       ),
