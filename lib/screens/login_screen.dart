@@ -1,3 +1,4 @@
+import 'package:farm_app/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -62,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
         )
     );
 
+    //login button
     final loginButton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
@@ -107,7 +109,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: <Widget>[
                         Text("Don't have an account? "),
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => RegistrationScreen()));
+                          },
                           child: Text("SignUp", style: TextStyle(
                               color: Colors.blueAccent,
                               fontWeight: FontWeight.bold,
