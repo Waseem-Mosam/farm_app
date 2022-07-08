@@ -1,4 +1,5 @@
 import 'package:farm_app/screens/login_screen.dart';
+import 'package:farm_app/screens/role_screen.dart';
 import 'package:farm_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: WelcomeScreen(),
+      home: RoleScreen(),
     );
   }
 }
