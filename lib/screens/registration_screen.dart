@@ -1,3 +1,4 @@
+import 'package:farm_app/screens/role_screen.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -92,7 +93,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       child: MaterialButton(
         padding: EdgeInsets.fromLTRB(20, 15,20, 15),
         minWidth: MediaQuery.of(context).size.width,
-        onPressed: (){},
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => RoleScreen()));
+        },
         child: Text("Sign Up", textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20,
               color: Colors.white,
